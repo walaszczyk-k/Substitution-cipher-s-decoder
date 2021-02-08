@@ -1,0 +1,329 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+    font-size: 10px;
+}
+
+body {
+    background-color: #111;
+    color: #ddd;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+
+
+    &__header {
+        width: 92%;
+        border-right: 2px solid rgba(255, 255, 255, .75);
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 2.2rem;
+        color: rgb(47, 143, 47);
+
+        &--typing {
+            animation: typewriter 10s steps(44) 1.6s infinite alternate both, blinkTextCursor 600ms steps(44) infinite normal;
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+
+            4% {
+                width: 0;
+            }
+
+            60% {
+                width: 92%;
+            }
+        }
+
+        @keyframes blinkTextCursor {
+            from {
+                border-right-color: rgba(255, 255, 255, .75);
+            }
+
+            to {
+                border-right-color: transparent;
+            }
+        }
+    }
+
+    &__input {
+        padding: 30px 0 0;
+    }
+
+    &__header-2 {
+        padding: 10px 0;
+        font-size: 1.6rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        &--comment {
+            padding: 10px 0;
+            color: #777;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__code-key {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1.8rem;
+        background-color: rgba(48, 48, 48, 0.562);
+        color: rgb(47, 143, 47);
+        border: none;
+
+        &:focus {
+            color: rgb(47, 143, 47);
+            outline: 0;
+            border-bottom: 2px solid rgb(47, 143, 47);
+        }
+
+    }
+
+    &__btn {
+        width: 58%;
+        margin: 20px 0;
+        padding: 10px 0;
+        font-size: 1.8rem;
+        background-color: rgba(70, 172, 70, 0.733);
+        color: black;
+        border: 1px solid rgba(47, 143, 47, 0.247);
+
+    }
+
+}
+
+@media (max-width: 320px) {
+    .main {
+
+        &__header {
+            width: 100%;
+            font-size: 1.8rem;
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+
+            4% {
+                width: 0;
+            }
+
+            60% {
+                width: 100%;
+            }
+        }
+
+        &__header-2 {
+            font-size: 1.4rem;
+
+            &--comment {
+                font-size: 1.4rem;
+            }
+        }
+
+        &__code-key {
+            font-size: 1.8rem;
+
+        }
+
+        &__btn {
+            width: 64%;
+            margin: 14px 0;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+
+@media (min-width: 321px) and (max-width: 400px) {
+    .main {
+
+        &__header {
+            width: 98%;
+            font-size: 2rem;
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+
+            4% {
+                width: 0;
+            }
+
+            60% {
+                width: 98%;
+            }
+        }
+
+        &__btn {
+            width: 60%;
+
+        }
+    }
+}
+
+
+@media (min-width: 760px) and (max-width: 999px) {
+    .main {
+
+        &__header {
+            width: 84%;
+            font-size: 4rem;
+
+            &--typing {
+                animation: typewriter 10s steps(44) 1.6s infinite alternate both, blinkTextCursor 400ms steps(44) infinite normal;
+            }
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+
+            4% {
+                width: 0;
+            }
+
+            60% {
+                width: 84%;
+            }
+        }
+
+        &__input {
+            padding: 60px 0 0;
+        }
+
+
+        &__header-2 {
+            padding: 16px 0;
+            font-size: 3rem;
+
+            &--comment {
+                font-size: 2.6rem;
+            }
+        }
+
+        &__code-key {
+            font-size: 2.6rem;
+
+        }
+
+        &__btn {
+            width: 50%;
+            margin: 32px 0;
+            font-size: 3.2rem;
+        }
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1439px) {
+    .main {
+
+        &__header {
+            width: 76%;
+            font-size: 5rem;
+
+            &--typing {
+                animation: typewriter 10s steps(44) 1.6s infinite alternate both, blinkTextCursor 400ms steps(44) infinite normal;
+            }
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+
+            4% {
+                width: 0;
+            }
+
+            60% {
+                width: 76%;
+            }
+        }
+
+        &__input {
+            padding: 60px 0 0;
+        }
+
+
+        &__header-2 {
+            padding: 16px 0;
+            font-size: 4rem;
+
+            &--comment {
+                font-size: 3.6rem;
+            }
+        }
+
+        &__code-key {
+            font-size: 3.6rem;
+
+        }
+
+        &__btn {
+            width: 50%;
+            margin: 32px 0;
+            font-size: 4.2rem;
+        }
+    }
+}
+
+
+
+@media (min-width: 1440px) {
+    .main {
+        padding: 60px 160px;
+
+        &__header {
+            width: 66%;
+            font-size: 6rem;
+
+            @keyframes typewriter {
+                from {
+                    width: 0;
+                }
+
+                4% {
+                    width: 0;
+                }
+
+                60% {
+                    width: 66%;
+                }
+            }
+        }
+
+        &__header-2 {
+            padding: 14px 0;
+            font-size: 2.4rem;
+
+            &--comment {
+                font-size: 2.4rem;
+            }
+        }
+
+        &__code-key {
+            font-size: 3rem;
+        }
+
+        &__btn {
+            width: 28%;
+            margin: 24px 0;
+            font-size: 3.4rem;
+        }
+
+    }
+}
